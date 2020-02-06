@@ -4,6 +4,8 @@
 */
 function mostrar()
 {
-
+	var dato ;
+	dato = prompt("Ingrese su dato","Dato");
+	alert(dato);
 }
 
