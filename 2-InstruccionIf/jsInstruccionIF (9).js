@@ -5,9 +5,9 @@ function mostrar()
 	
 	// Generamos numero random entre 0 y 1
 	numeroRandom = Math.random();
-	/* Multiplicamos ese numeroRandom * 11 
-		para obtener un valor entre 0 y 10 */
-	numeroRandom = numeroRandom * 11 ;
+	/* Multiplicamos ese numeroRandom * 10 y sumamos 1. 
+		para obtener un valor entre 1 y 10 */
+	numeroRandom = numeroRandom * 10 + 1 ;
 	//Parseamos a entero ese numero para evitar decimales.
 	numeroRandom = parseInt(numeroRandom);
 
