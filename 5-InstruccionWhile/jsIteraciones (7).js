@@ -17,7 +17,7 @@ function mostrar()
 		respuesta = prompt("¿Desea ingresar otro número? (si/no)","si");
 		respuesta = respuesta.toLowerCase();
 		while (respuesta != "si" && respuesta !="no"){
-			respuesta = prompt("Debe ingresar una respuesta correcta, ¿desea continuar? (si/no)","si");
+			respuesta = prompt("Debe ingresar una respuesta correcta, ¿desea continuar? (si/no)","Si");
 			respuesta = respuesta.toLowerCase();
 		}
 	}
