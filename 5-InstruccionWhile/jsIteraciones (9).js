@@ -13,7 +13,10 @@ function mostrar()
 		
 		numero = prompt('Ingrese un número','0');	
 		numero = parseInt(numero);
-
+		while (isNaN(num)){
+			num = prompt("Ingrese un número correcto:");
+			num = parseInt(num);
+		}
 		if (numero > max){
 			max = numero;
 		}

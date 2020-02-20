@@ -9,6 +9,10 @@ function mostrar()
 		contador++;
 		num = prompt("Ingrese un número:");
 		num = parseInt(num);
+		while (isNaN(num)){
+			num = prompt("Ingrese un número correcto:");
+			num = parseInt(num);
+		}
 		acumulador = acumulador + num;
 	}
 

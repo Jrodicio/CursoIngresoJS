@@ -1,11 +1,14 @@
 function mostrar()
 {
 
-    var clave = prompt("ingrese el número clave.");
+    var clave = prompt("ingrese el número clave.").toLowerCase();
     var pass = "utn750";
-
-    while (clave != pass) {
-        clave = prompt("Clave incorrecta. Vuelva a intentar.");
+    var contador = 0;
+    
+    while (clave != pass && contador < 2) {
+        contador++ ;
+        clave = prompt("Clave incorrecta. Vuelva a intentar.").toLowerCase();
+        
     }
-
+    
 }//FIN DE LA FUNCIÓN

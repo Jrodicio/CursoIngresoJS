@@ -20,9 +20,13 @@ function mostrar()
 		//Ingresa numero
 		numeroIngresado = prompt("Ingrese su número:","0") ;
 		numeroIngresado = parseInt(numeroIngresado)	;
-		
+		while (isNaN(numeroIngresado)){
+			numeroIngresado = prompt("Ingrese un número correcto:");
+			numeroIngresado = parseInt(numeroIngresado);
+		}
 		//Validamos cual de estos case es true y ejecutamos.
 		switch (true) {
+			
 			case (numeroIngresado > 0):
 				sumaPositivos = sumaPositivos + numeroIngresado ;
 				cantidadPositivos++ ;	
@@ -57,7 +61,8 @@ function mostrar()
 	promedioNegativos = sumaNegativos / cantidadNegativos;
 	promedioPositivos = sumaPositivos / cantidadPositivos;
 	diferenciaPyN = sumaPositivos - sumaNegativos;
-	/** Damos devolucioin.
+
+	/** Damos devolucion.
 	 * 1-Suma de los negativos. 
 	 * 2-Suma de los positivos. 
 	 * 3-Cantidad de positivos. 
@@ -68,15 +73,15 @@ function mostrar()
 	 * 8-Promedios de negativos. 
 	 * 9-Diferencia entre positivos y negativos */
 
-	 document.writeln("1-Suma de los negativos: "+sumaNegativos+"<br>");
-	 document.writeln("2-Suma de los positivos: "+sumaPositivos+"<br>");
-	 document.writeln("3-Cantidad de positivos: "+cantidadPositivos+"<br>");
-	 document.writeln("4-Cantidad de negativos: "+cantidadNegativos+"<br>");
-	 document.writeln("5-Cantidad de ceros: "+cantidadCeros+"<br>");
-	 document.writeln("6-Cantidad de números pares: "+cantidadPares+"<br>");
-	 document.writeln("7-Promedio de positivos: "+promedioPositivos+"<br>");
-	 document.writeln("8-Promedios de negativos: "+promedioNegativos+"<br>");
-	 document.writeln("9-Diferencia entre positivos y negativos: "+diferenciaPyN);
+	 document.write("1-Suma de los negativos: "+sumaNegativos+"<br>");
+	 document.write("2-Suma de los positivos: "+sumaPositivos+"<br>");
+	 document.write("3-Cantidad de positivos: "+cantidadPositivos+"<br>");
+	 document.write("4-Cantidad de negativos: "+cantidadNegativos+"<br>");
+	 document.write("5-Cantidad de ceros: "+cantidadCeros+"<br>");
+	 document.write("6-Cantidad de números pares: "+cantidadPares+"<br>");
+	 document.write("7-Promedio de positivos: "+promedioPositivos+"<br>");
+	 document.write("8-Promedios de negativos: "+promedioNegativos+"<br>");
+	 document.write("9-Diferencia entre positivos y negativos: "+diferenciaPyN);
 
 
 }//FIN DE LA FUNCIÓN

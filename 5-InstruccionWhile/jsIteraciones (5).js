@@ -2,6 +2,7 @@ function mostrar()
 {
     // Pido dato.
     var sexo = prompt("Ingrese f ó m:");
+    var sexoValidado ;
     
     // Lo paso a minuscula.
     sexo = sexo.toLowerCase();
@@ -13,6 +14,15 @@ function mostrar()
     }
     
     //Una vez que ingreso el dato correcto, lo muestro validado.
-    document.getElementById('Sexo').value=sexo;
+    switch (sexo){
+        case "m":
+            sexoValidado = "Masculino";
+        break;
+        default:
+            sexoValidado = "Femenino";
+        break;
+    }
+
+    document.getElementById('Sexo').value=sexoValidado;
 
 }//FIN DE LA FUNCIÓN
