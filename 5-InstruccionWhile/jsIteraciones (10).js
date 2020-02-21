@@ -47,12 +47,8 @@ function mostrar()
 				sumaNegativos = sumaNegativos + numeroIngresado ;
 				cantidadNegativos++ ;
 			break;
-			case (numeroIngresado == 0):
-				cantidadCeros++
-			break;
-			
 			default:
-
+				cantidadCeros++
 			break;
 		}
 		if (numeroIngresado%2 == 0){
@@ -63,7 +59,9 @@ function mostrar()
 
 	}
 	//Fin while
-	if (cantidadNegativos == 0){
+	// auxNegativos y auxPositivos valen 0 a excepcion de cuando la cantidad de negativos/positivos sean 0.
+	// Se utiliza para evitar dividir por 0.
+	if (cantidadNegativos == 0 ){
 		auxNegativos = 1 ;
 	}
 	if (cantidadPositivos == 0){
