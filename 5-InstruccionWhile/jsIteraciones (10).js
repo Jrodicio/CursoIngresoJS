@@ -1,6 +1,7 @@
 function mostrar()
 {
 
+	//Declaramos variables
 	var numeroIngresado;
 	var sumaNegativos = 0;
 	var sumaPositivos = 0;
@@ -11,25 +12,36 @@ function mostrar()
 	var promedioPositivos = 0;
 	var promedioNegativos = 0;
 	var diferenciaPyN = 0;
-	var respuesta="si";
-	
-	
-	
-	while(respuesta!="no")
-	{
+	var auxNegativos = 0;
+	var auxPositivos = 0;
+	var respuesta = true;
+
+	debugger;
+	//Inicia while mientras respuesta sea true
+	while(respuesta){
 		//Ingresa numero
 		numeroIngresado = prompt("Ingrese su número:","0") ;
+		//Si no se ingresa nada, rompemos while.
+		if (numeroIngresado == null){
+			break;
+		}
 		numeroIngresado = parseInt(numeroIngresado)	;
 		while (isNaN(numeroIngresado)){
 			numeroIngresado = prompt("Ingrese un número correcto:");
+			if (numeroIngresado == null){
+				break;
+			}
 			numeroIngresado = parseInt(numeroIngresado);
+		}
+		if (numeroIngresado == null){
+			break;
 		}
 		//Validamos cual de estos case es true y ejecutamos.
 		switch (true) {
 			
 			case (numeroIngresado > 0):
 				sumaPositivos = sumaPositivos + numeroIngresado ;
-				cantidadPositivos++ ;	
+				cantidadPositivos++ ;
 			break;
 			case (numeroIngresado < 0) :
 				sumaNegativos = sumaNegativos + numeroIngresado ;
@@ -47,19 +59,20 @@ function mostrar()
 			cantidadPares++;
 		}
 			
-		respuesta = prompt("¿Desea continuar?","si");
+		respuesta = confirm("¿Desea continuar?");
 
 	}
-	// Si respuesta == no: Salimos de while y hacemos calculos finales.
+	//Fin while
 	if (cantidadNegativos == 0){
-		cantidadNegativos == 1 ;
+		auxNegativos = 1 ;
 	}
 	if (cantidadPositivos == 0){
-		cantidadPositivos == 1 ;
+		auxPositivos = 1 ;
 	}
+	
 	//Promedios
-	promedioNegativos = sumaNegativos / cantidadNegativos;
-	promedioPositivos = sumaPositivos / cantidadPositivos;
+	promedioNegativos = sumaNegativos / (cantidadNegativos+auxNegativos);
+	promedioPositivos = sumaPositivos / (cantidadPositivos+auxPositivos);
 	diferenciaPyN = sumaPositivos - sumaNegativos;
 
 	/** Damos devolucion.
@@ -79,8 +92,8 @@ function mostrar()
 	 document.write("4-Cantidad de negativos: "+cantidadNegativos+"<br>");
 	 document.write("5-Cantidad de ceros: "+cantidadCeros+"<br>");
 	 document.write("6-Cantidad de números pares: "+cantidadPares+"<br>");
-	 document.write("7-Promedio de positivos: "+promedioPositivos+"<br>");
-	 document.write("8-Promedios de negativos: "+promedioNegativos+"<br>");
+	 document.write("7-Promedio de positivos: "+promedioPositivos.toFixed(2)+"<br>");
+	 document.write("8-Promedios de negativos: "+promedioNegativos.toFixed(2)+"<br>");
 	 document.write("9-Diferencia entre positivos y negativos: "+diferenciaPyN);
 
 
