@@ -40,11 +40,11 @@ function mostrar()
 		switch (true) {
 			
 			case (numeroIngresado > 0):
-				sumaPositivos = sumaPositivos + numeroIngresado ;
+				sumaPositivos += numeroIngresado ;
 				cantidadPositivos++ ;
 			break;
 			case (numeroIngresado < 0) :
-				sumaNegativos = sumaNegativos + numeroIngresado ;
+				sumaNegativos += numeroIngresado ;
 				cantidadNegativos++ ;
 			break;
 			default:
@@ -71,6 +71,8 @@ function mostrar()
 	//Promedios
 	promedioNegativos = sumaNegativos / (cantidadNegativos+auxNegativos);
 	promedioPositivos = sumaPositivos / (cantidadPositivos+auxPositivos);
+	
+	//Diferencia entre positivos y negativos
 	diferenciaPyN = sumaPositivos - sumaNegativos;
 
 	/** Damos devolucion.
