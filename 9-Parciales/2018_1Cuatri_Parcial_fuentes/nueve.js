@@ -76,17 +76,10 @@ debugger;
 
     if (ingresoProducto){
         promedioPeso = acumuladorPeso/contadorProductos;
+        document.write("a- Temperaturas pares: "+temperaturasPares+"<br>");
+        document.write("b- Marca de producto más pesado: "+marcaProductoMasPesado+"<br>");
+        document.write("c- Cantidad de productos que se conservan a menos de 0 grados: "+cantidadProductosTempBajoCero+"<br>");
+        document.write("d- Promedio peso: "+promedioPeso+"<br>");
+        document.write("f- Peso máximo ; Peso mínimo: "+pesoMaximo+" ; "+pesoMinimo);
     }
-    else{
-        marcaProductoMasPesado="-";
-        promedioPeso="-";
-        pesoMaximo="-";
-        pesoMinimo="-";
-    }
-
-    document.write("a- Temperaturas pares: "+temperaturasPares+"<br>");
-    document.write("b- Marca de producto más pesado: "+marcaProductoMasPesado+"<br>");
-    document.write("c- Cantidad de productos que se conservan a menos de 0 grados: "+cantidadProductosTempBajoCero+"<br>");
-    document.write("d- Promedio peso: "+promedioPeso+"<br>");
-    document.write("f- Peso máximo ; Peso mínimo: "+pesoMaximo+" ; "+pesoMinimo);
 }
