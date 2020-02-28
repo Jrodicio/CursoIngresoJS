@@ -47,10 +47,13 @@ debugger;
 
         //Si ingreso todo, comenzamos a contar los productos ingresados
         
+        
+        ingresoProducto = true;
+        
         //D
         acumuladorPeso += pesoProducto;
         contadorProductos++;
-        ingresoProducto = true;
+        
 
         //A
         if (temperaturaAlmacenamientoProducto % 2 == 0){
